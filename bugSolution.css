@@ -1,0 +1,20 @@
+/* Correct use of calc() */
+.element {
+  width: calc(100% - 20px);
+  height: calc(50% + 10px);
+  /*Correct nesting*/
+  padding: calc( (100vw - 20px)/2);
+}
+
+/* Avoiding common mistakes */
+.another-element {
+  width: calc(100% - 20px); /* Correct: uses consistent units */
+  /* Incorrect: mixing units without parentheses can cause issues*/
+  /* height: calc(50% + 10px); */ 
+  height: calc((50% + 10px));/*Correct*/
+}
+
+/*Incorrect Nesting */
+/*.element {
+  width: calc(calc(100% - 20px) + 10px); /* Incorrect nesting, leading to parsing errors */
+}*/
